@@ -1,0 +1,63 @@
+.movie {
+    max-width: 290px;
+    height: 428px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.name {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    color: #1F1F1F;
+    margin: 10px 0px;
+}
+
+.description {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #1F1F1F;
+}
+
+.price {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: left;
+    color: #1F1F1F;
+    margin: 0px;
+}
+
+.footer_card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.btns {
+    display: flex;
+    align-items: center;
+    height: 32px;
+}
+
+.heartIcon {
+    padding: 8px 9px;
+    background: #096DD9;
+    border: 1px solid #096DD9;
+    border-radius: 2px;
+    color: #fff;
+    width: 14px;
+    height: 14px;
+}
+
+.btn_cart {
+    padding: 6px 16px;
+    color: #fff;
+    background: #08979C;
+    border-radius: 2px;
+    margin-right: 20px;
+}

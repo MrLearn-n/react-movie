@@ -1,0 +1,24 @@
+.banner_body {
+    background: linear-gradient(180deg, #79DCE4 0%, #0DA8B5 100%);
+    border-radius: 10px;
+}
+
+.banner_content {
+    position: relative;
+}
+
+.banner_text {
+    padding: 85px 0px 128px 0px;
+    max-width: 437px;
+    margin-left: 20px;
+}
+
+.banner_img {
+    position: absolute;
+    right: 0px;
+    bottom: -5px;
+}
+
+.txt {
+    color: #fff;
+}
