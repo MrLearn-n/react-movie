@@ -14,6 +14,8 @@ export default function Home() {
     const [favoriteData, setfavoriteData] = useState([]);
 
     const filterArrCart = [...cartData];
+    const filterArrFavorite = [...favoriteData];
+
 
     function addFavorite (item) {
         let isStatus = false;
@@ -45,10 +47,15 @@ export default function Home() {
 
     function delCart (id) {
         setcartData(filterArrCart.filter(item => {
-            return item.id !== id
+            return item.id !== id;
         }));
     }
 
+    function delFavorite (id) {
+        setfavoriteData(filterArrFavorite.filter(item => {
+            return item.id !== id;
+        }))
+    }
 
     function modalCartShow () {
         setshowCartModal((prev) => !prev)
@@ -64,7 +71,7 @@ export default function Home() {
             <Header btnShowCartModal = {modalCartShow} btnShowFavoriteModal = {modalFavoriteShow}/>
             <Main dataCart  = {addCart} dataFavorite = {addFavorite}/>
             <Footer />
-            {showFavoriteModal && (<Favorites info = {favoriteData} modalFavoriteClose = {modalFavoriteShow}/>)} 
+            {showFavoriteModal && (<Favorites info = {favoriteData} deleteFavoriteItem = {delFavorite} modalFavoriteClose = {modalFavoriteShow}/>)} 
             {showCartModal && (<Shopping  info = {cartData} deleteCartItem = {delCart} modalCartClose = {modalCartShow} />)}
         </div>
     )
