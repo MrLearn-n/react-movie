@@ -1,6 +1,5 @@
 .movie {
     max-width: 290px;
-    height: 428px;
     padding: 10px;
     display: flex;
     flex-direction: column;
@@ -13,6 +12,9 @@
     line-height: 28px;
     color: #1F1F1F;
     margin: 10px 0px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .description {
@@ -60,4 +62,8 @@
     background: #08979C;
     border-radius: 2px;
     margin-right: 20px;
+}
+
+.btn_cart > p {
+    margin: 0px;
 }

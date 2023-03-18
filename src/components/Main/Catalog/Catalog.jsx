@@ -3,9 +3,12 @@ import React from 'react'
 import Movie from './Movie/Movie';
 import { useEffect, useState } from 'react';
 import style from './Catalog.module.css'
-export default function Catalog() {
+
+export default function Catalog({dataCart, dataFavorite}) {
     const [state, setState] = useState([]);
-    
+
+    // console.log(cart);
+
     useEffect(() => {
         const getData = async () => {
             await axios.get('./data.json')
@@ -25,7 +28,7 @@ export default function Catalog() {
             <h1>Популярно сейчас</h1>
             <div className={style.row}>
                 {state.map((item, id) => {
-                    return <Movie data={item} key={id} />
+                    return <Movie data={item} key={id} dataCart = {dataCart} dataFavorite = {dataFavorite} />
                 })}
             </div>
         </div>

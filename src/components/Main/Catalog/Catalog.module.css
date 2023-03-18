@@ -4,9 +4,9 @@
     grid-template-columns: repeat(4, 290px);
     justify-content: space-between;
     align-items: flex-start;
-    row-gap: 80px   ;
+    row-gap: 80px;
 }
 
 .catalog_body {
-    margin: 100px 0px 0px 0px;
+    margin: 100px 0px;
 }

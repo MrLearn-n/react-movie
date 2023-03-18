@@ -6,7 +6,7 @@ import {BsFillSunFill} from 'react-icons/bs';
 import {BiBookmark} from 'react-icons//bi';
 import style from './Header.module.css';
 
-export default function Header() {
+export default function Header({btnShowCartModal, btnShowFavoriteModal}) {
     return (
         <div className={style.flex_content}>
             <div className=''>
@@ -17,13 +17,13 @@ export default function Header() {
                 <AiOutlineSearch className={style.searchIcon} />
             </div>
             <div className={style.borderIcon}>
-                <AiOutlineShoppingCart className={style.cartIcon}/>
+                <AiOutlineShoppingCart className={style.cartIcon} onClick = {() => btnShowCartModal()}/>
             </div>
             <div className={style.borderIcon}>
                 <BsFillSunFill className={style.sunIcon}/>
             </div>
-            <div className={style.favoriteBtn}>
-                <BiBookmark className={style.favoriteIcon}/>
+            <div className={style.favoriteBtn} onClick = {() => btnShowFavoriteModal()}>
+                <BiBookmark className={style.favoriteIcon} />
                 <p className={style.txt}>Избранное</p>
             </div>
         </div>
