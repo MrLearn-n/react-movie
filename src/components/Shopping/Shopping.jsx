@@ -25,7 +25,7 @@ export default function Shopping({info, deleteCartItem, modalCartClose}) {
                                                 <p>{price}</p>
                                             </div>
                                         </div>
-                                        <div className={style.cart__list_btn}> 
+                                        <div className={style.cart__item_btn}> 
                                             <RiDeleteBin7Line className={style.deleteIconBtn} onClick = {() => deleteCartItem(id)}/>
                                         </div>
                                     </div>

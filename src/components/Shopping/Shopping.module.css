@@ -45,9 +45,7 @@
     flex-direction: column;
 }
 
-.cart__list_btn {
-    width: 40px;
-    height: 40px;
+.cart__item_btn {
     cursor: pointer;
 }
 
