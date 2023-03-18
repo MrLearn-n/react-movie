@@ -20,6 +20,7 @@
     width: 100%;
     min-height: 196px;
     background-color: #fff;
+    border-radius: 10px;
     padding: 40px;
     box-sizing: border-box;
 }
@@ -36,6 +37,56 @@
     font-size: 16px;
     line-height: 19px;
     margin: 10px 0px 20px 0px;
+}
+
+.favorites__list {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.favorites__item {
+    padding: 10px;
+    margin: 0px 20px;
+    max-width: 180px;
+    box-shadow: 0px 6px 6px rgba(209, 209, 209, 0.25);
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.favorites__item:first-child,
+.favorites__item:last-child {
+    margin-left: 0px;
+}
+
+.favorites__item_img > img {
+    width: 100%;
+    border-radius: 2px;
+}
+
+.favorites__item_name {
+    font-weight: 700;
+    font-size: 16px;
+    min-height: 38px;
+    line-height: 19px;
+    color: #1F1F1F;
+    margin: 10px 0px 32px 0px;
+}
+
+.favorites__item_btn {
+    display: flex;
+    justify-content: flex-end;
+    cursor: pointer;
+}
+
+.deleteIconBtn {
+    padding: 9px;
+    width: 14px;
+    height: 14px;
+    color: #000;
+    border: 1px solid #D9D9D9;
+    border-radius: 6px;
 }
 
 .closeIconBtn {
