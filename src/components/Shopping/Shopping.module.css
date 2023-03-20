@@ -1,5 +1,13 @@
 .cart {
-    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background: rgba(31, 31, 31, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .cart__closeBtn {
@@ -12,10 +20,7 @@
 }
 
 .cart__body {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    position: relative;
     max-width: 1100px;
     width: 100%;
     min-height: 196px;

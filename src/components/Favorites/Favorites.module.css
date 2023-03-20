@@ -1,5 +1,13 @@
 .favorites {
-    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background: rgba(31, 31, 31, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .favorites__closeBtn {
@@ -12,10 +20,7 @@
 }
 
 .favorites__body {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    position: relative;
     max-width: 1140px;
     width: 100%;
     min-height: 196px;
@@ -55,9 +60,12 @@
     box-sizing: border-box;
 }
 
-.favorites__item:first-child,
-.favorites__item:last-child {
+.favorites__item:first-child {
     margin-left: 0px;
+}
+
+.favorites__item:last-child {
+    margin-right: 0px;
 }
 
 .favorites__item_img > img {
