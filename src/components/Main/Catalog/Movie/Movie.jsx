@@ -7,7 +7,7 @@ export default function Movie ({data, dataCart, dataFavorite}) {
         <div className={style.movie}>
             <img src={require(`./../../../../assets/main/${data.img}`)} alt={data.name} draggable={false}/>
             <p className={style.name}>{data.name}</p>
-            <p className={style.decription}>{data.decription}</p>    
+            <p className={style.description}>{data.decription}</p>    
             <div className={style.footer_card}>
                 <p className={style.price}>{data.price}</p>
                 <div className={style.btns} >
