@@ -67,11 +67,11 @@ export default function Home() {
     }
 
     return (
-        <div className='Home'>
+        <div className='home'>
             <Header btnShowCartModal = {modalCartShow} btnShowFavoriteModal = {modalFavoriteShow}/>
             <Main dataCart  = {addCart} dataFavorite = {addFavorite}/>
             <Footer />
-            {showFavoriteModal && (<Favorites info = {favoriteData} deleteFavoriteItem = {delFavorite} modalFavoriteClose = {modalFavoriteShow}/>)} 
+            {showFavoriteModal && (<Favorites info = {favoriteData} deleteFavoriteItem = {delFavorite} modalFavoriteClose = {modalFavoriteShow} />)} 
             {showCartModal && (<Shopping  info = {cartData} deleteCartItem = {delCart} modalCartClose = {modalCartShow} />)}
         </div>
     )
