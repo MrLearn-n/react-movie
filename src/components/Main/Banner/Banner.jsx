@@ -17,9 +17,9 @@ export default function Banner() {
                     <h1 className={style.txt}>Выбирайте те фильмы, которые хотите посмотреть</h1>
                 </div>
                 <div className={style.banner_img}>
-                    <img src={bannerImg1} />
-                    <img src={bannerImg2} />
-                    <img src={bannerImg3} />
+                    <img src={bannerImg1} draggable = {false}/>
+                    <img src={bannerImg2} draggable = {false}/>
+                    <img src={bannerImg3} draggable = {false}/>
                 </div>
             </div>
         </div>
