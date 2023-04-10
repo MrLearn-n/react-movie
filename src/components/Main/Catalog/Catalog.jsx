@@ -7,8 +7,6 @@ import style from './Catalog.module.css'
 export default function Catalog({dataCart, dataFavorite}) {
     const [state, setState] = useState([]);
 
-    // console.log(cart);
-
     useEffect(() => {
         const getData = async () => {
             await axios.get('./data.json')
@@ -25,7 +23,7 @@ export default function Catalog({dataCart, dataFavorite}) {
 
     return (
         <div className={style.catalog_body}>
-            <h1>Популярно сейчас</h1>
+            <h1 className={style.txt}>Популярно сейчас</h1>
             <div className={style.row}>
                 {state.map((item, id) => {
                     return <Movie data={item} key={id} dataCart = {dataCart} dataFavorite = {dataFavorite} />
