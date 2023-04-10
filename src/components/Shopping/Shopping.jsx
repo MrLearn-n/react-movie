@@ -4,12 +4,22 @@ import { RiDeleteBin7Line } from 'react-icons/ri';
 import { AiOutlineClose } from 'react-icons/ai';
 
 export default function Shopping({info, deleteCartItem, modalCartClose}) {
+    
+    let sum = 0;
+    info.forEach(element => {
+        sum += Number.parseFloat(element.price);
+    });
+
+    function buyMsg () {
+        alert('Поздравляем с покупкой! Приятного просмотра!');
+    }
+
     return (
         <div className={style.cart}>
             <div className={style.cart__body}>
                 <h4 className={style.cart__body_title}>Корзина</h4>
                 {info.length > 0 
-                    ?   <div className=''>
+                    ?   <div className={style.cart__wrapper}>
                             <p className={style.cart__body_sbtitle}>Вы выбрали несколько фильмов! Поздравляем</p>
                             <div className={style.cart__list}>
                                 {info.map(({name, img, price, id}) => (
@@ -21,7 +31,7 @@ export default function Shopping({info, deleteCartItem, modalCartClose}) {
                                                 </div>
                                                 <p className={style.cart__content_name}>{name}</p>
                                             </div>
-                                            <div className=''>
+                                            <div className={style.cart__content_price}>
                                                 <p>{price}</p>
                                             </div>
                                         </div>
@@ -30,6 +40,9 @@ export default function Shopping({info, deleteCartItem, modalCartClose}) {
                                         </div>
                                     </div>
                                 ))}
+                            </div>
+                            <div className = {style.cart_buyBtn} onClick = {buyMsg}>
+                                    <p>Оплатить ({new Intl.NumberFormat().format(sum)})</p>
                             </div>
                         </div>
                     :   <p className={style.cart__body_sbtitle}>Ваша корзина пуста. Самое время её заполнить</p>  
