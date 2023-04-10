@@ -1,5 +1,5 @@
 import React from 'react'
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Header from './../components/Header/Header';
 import Main from './../components/Main/Main';
 import Footer from './../components/Footer/Footer';
@@ -15,6 +15,33 @@ export default function Home() {
 
     const filterArrCart = [...cartData];
     const filterArrFavorite = [...favoriteData];
+
+
+    const [theme, setTheme] = useState('light');
+
+    const root = document.querySelector(':root');
+
+    const components = [
+        'body-bg-color',
+        'card-bg-color',
+        'text-color',
+        'box-border-color',
+        'icon-color',
+        'icon-btn-close',
+    ]
+
+    function changeTheme () {
+        setTheme(theme === 'light' ? 'dark' : 'light');
+    }
+
+    useEffect(() => {
+        components.forEach(item => {
+            root.style.setProperty (
+                `--${item}-default`,
+                `var(--${item}-${theme})`
+            )
+        })
+    }, [theme])
 
 
     function addFavorite (item) {
@@ -68,11 +95,32 @@ export default function Home() {
 
     return (
         <div className='home'>
-            <Header btnShowCartModal = {modalCartShow} btnShowFavoriteModal = {modalFavoriteShow}/>
-            <Main dataCart  = {addCart} dataFavorite = {addFavorite}/>
-            <Footer />
-            {showFavoriteModal && (<Favorites info = {favoriteData} deleteFavoriteItem = {delFavorite} modalFavoriteClose = {modalFavoriteShow} />)} 
-            {showCartModal && (<Shopping  info = {cartData} deleteCartItem = {delCart} modalCartClose = {modalCartShow} />)}
+            <Header 
+                btnShowCartModal = {modalCartShow} 
+                btnShowFavoriteModal = {modalFavoriteShow}
+                cartInfo = {cartData}
+                changeTheme = {changeTheme}
+                theme = {theme}
+            />
+            <Main 
+                dataCart  = {addCart} 
+                dataFavorite = {addFavorite}
+            />
+            <Footer 
+                theme = {theme}
+            />
+            {showFavoriteModal && 
+                (<Favorites 
+                    info = {favoriteData} 
+                    deleteFavoriteItem = {delFavorite} 
+                    modalFavoriteClose = {modalFavoriteShow}
+                />)} 
+            {showCartModal && 
+                (<Shopping  
+                    info = {cartData} 
+                    deleteCartItem = {delCart} 
+                    modalCartClose = {modalCartShow}
+                />)}
         </div>
     )
 }
