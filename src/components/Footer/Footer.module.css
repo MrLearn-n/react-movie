@@ -1,3 +1,5 @@
+@import url('../../varialbels.css');
+
 .flex_content {
     display: flex;
     align-items: center;
@@ -6,11 +8,12 @@
 }
 
 .footer__logo_sbtitle {
+    font-family: 'Open Sans', sans-serif;
     font-weight: 400;
     font-size: 16px;
     line-height: 22px;
-    color: #2B2B2B;
-    margin: 0px;
+    color: var(--text-color-default);
+    margin: 10px 0px;
 }
 
 .footer__social_vk {

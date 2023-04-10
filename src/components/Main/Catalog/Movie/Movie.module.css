@@ -1,20 +1,32 @@
+@import url('../../../../varialbels.css');
+
 .movie {
     max-width: 290px;
     padding: 10px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    border-radius: 10px;
+    background-color: var(--card-bg-color-default);
+    box-shadow: 0px 6px 6px rgba(209, 209, 209, 0.25);
+    transition: box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.movie:hover {
+    box-shadow: 0px 6px 6px rgba(142, 142, 142, 0.4);
 }
 
 .movie > img {
-border-radius: 2px;
+    border-radius: 2px;
+    user-select: none;
 }
 
 .name {
     font-weight: 700;
     font-size: 24px;
     line-height: 28px;
-    color: #1F1F1F;
+    color: var(--text-color-default);
     margin: 10px 0px;
     white-space: nowrap;
     overflow: hidden;
@@ -25,7 +37,7 @@ border-radius: 2px;
     font-weight: 400;
     font-size: 16px;
     line-height: 19px;
-    color: #1F1F1F;
+    color: var(--text-color-default);
     min-height: 40px;
 }
 
@@ -34,7 +46,8 @@ border-radius: 2px;
     font-size: 20px;
     line-height: 23px;
     text-align: left;
-    color: #1F1F1F;
+    user-select: none;
+    color: var(--text-color-default);
     margin: 0px;
 }
 
@@ -42,7 +55,6 @@ border-radius: 2px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    cursor: pointer;
 }
 
 .btns {
@@ -59,16 +71,33 @@ border-radius: 2px;
     color: #fff;
     width: 14px;
     height: 14px;
+    transition: background-color 0.3s linear;
+    cursor: pointer;
+}
+
+.heartIcon:hover {
+    background-color: #1E85F4;
 }
 
 .btn_cart {
     padding: 6px 16px;
     color: #fff;
-    background: #08979C;
+    background-color: #08979C;
     border-radius: 2px;
     margin-right: 20px;
+    transition: background-color 0.3s linear;
+    cursor: pointer;
+}
+
+.btn_cart:hover {
+    background-color: #1FCBD1;
 }
 
 .btn_cart > p {
     margin: 0px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    text-align: center;
+    user-select: none;
 }

@@ -10,3 +10,12 @@
 .catalog_body {
     padding: 100px 0px;
 }
+
+.txt {
+    display: inline-block;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 35px;
+    letter-spacing: -0.005em;
+    color: var(--text-color-default);
+}

@@ -12,39 +12,72 @@
     align-items: center;
     justify-content: space-between;
     padding: 10px;
-    border: 1px solid #D9D9D9;
+    margin: 0 10px;
+    border: 1px solid;
+    border-color: var(--box-border-color-default);
     border-radius: 6px;
 }
 
 input {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 27px;
+    letter-spacing: 0.005em;
+    color: var(--text-color-default);
+    background-color: var(--body-bg-color-default);
     outline: none;
     border: none;
 }
 
 .borderIcon {
-    border: 1px solid #D9D9D9;
+    position: relative;
+    border: 1px solid;
+    border-color: var(--box-border-color-default);
     border-radius: 6px;
     width: 60px;
     height: 62px;
+    margin: 0px 10px;
     box-sizing: border-box;
     cursor: pointer;
+}
+
+.counter {
+    position: absolute;
+    right: -6px;
+    bottom: -5px;
+    padding: 4px;
+    background: #096DD9;
+    border-radius: 20px;
+}
+
+.counter > p {
+    margin: 0;
+    font-weight: 600;
+    font-size: 14px;
+    color: #fff;
+    line-height: 16px;
 }
 
 .searchIcon {
     width: 40px;
     height: 40px;
+    cursor: pointer;
+    color: var(--icon-color-default);
 }
 
 .cartIcon {
     padding: 15px 13px 15px 10px;
     width: 34px;
     height: 30px;
+    color: var(--icon-color-default);
 }
 
 .sunIcon {
     padding: 10px 11px;
     width: 35.94px;
-    height: 35.94px
+    height: 35.94px;
+    color: var(--icon-color-default);
 }
 
 .favoriteBtn {
@@ -58,6 +91,7 @@ input {
 }
 
 .txt {
+    font-family: 'Open Sans', sans-serif;
     font-size: 20px;
     font-weight: 600;
     line-height: 27px;

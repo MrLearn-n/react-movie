@@ -17,8 +17,10 @@
     position: absolute;
     right: 0px;
     bottom: -5px;
+    user-select: none;
 }
 
 .txt {
+    font-weight: 400;
     color: #fff;
 }
