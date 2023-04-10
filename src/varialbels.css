@@ -1,0 +1,29 @@
+
+
+
+:root {
+    --body-bg-color-light: #FAFAFA;
+    --body-bg-color-dark: #252424;
+    --body-bg-color-default: var(--body-bg-color-light);
+  
+    --card-bg-color-light: #fff;
+    --card-bg-color-dark: #4B4B4B;
+    --card-bg-color-default: var(--card-bg-color-light);
+
+    --text-color-light: #1f1f1f;
+    --text-color-dark: #FFF5F5;
+    --text-color-default: var(--text-color-light);
+
+    --box-border-color-light: #D9D9D9;
+    --box-border-color-dark: #08979C;
+    --box-border-color-default: var(--body-bg-color-light);
+
+    --icon-btn-close-light: #595959;
+    --icon-btn-close-dark: #FFFFFF;
+    --icon-btn-close-default: var(var(--body-bg-color-light));
+
+    --icon-color-light: #1F1F1F;
+    --icon-color-dark: #FFFFFF;
+    --icon-color-default: var(--icon-color-light);
+  }
+  
