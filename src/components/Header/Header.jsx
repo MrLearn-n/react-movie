@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import {AiOutlineSearch} from 'react-icons/ai';
 import {AiOutlineShoppingCart} from 'react-icons/ai';
 import {BsFillSunFill} from 'react-icons/bs';
@@ -6,8 +6,19 @@ import {BiBookmark} from 'react-icons//bi';
 
 import style from './Header.module.css';
 import { Logo } from './Logo';
+import { useDispatch } from 'react-redux';
+import { filter } from '../../store/slice/dataSlice';
 
 export default function Header({btnShowCartModal, btnShowFavoriteModal, cartInfo, changeTheme, theme}) {    
+    const [searchValue, setSearchValue] = useState('');
+    const disaptch = useDispatch();
+    const handelSearchValue = (e) => {
+        setSearchValue(e.target.value);
+    }
+
+    useEffect(() => {
+        disaptch(filter(searchValue));
+    }, [searchValue])
 
     return (
         <div className={style.flex_content}>
@@ -17,7 +28,14 @@ export default function Header({btnShowCartModal, btnShowFavoriteModal, cartInfo
                 <Logo fill='white' />
             }
             <div className={style.search}>
-                <input type='search' placeholder="Поиск" className={style.input} />
+                <input 
+                    type='search' 
+                    placeholder="Поиск" 
+                    className={style.input}
+                    value={searchValue} 
+                    onChange={handelSearchValue}
+                    
+                />
                 <AiOutlineSearch className={style.searchIcon} />
             </div>
             <div className={style.borderIcon}>

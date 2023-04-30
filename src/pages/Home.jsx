@@ -5,8 +5,16 @@ import Main from './../components/Main/Main';
 import Footer from './../components/Footer/Footer';
 import Shopping from '../components/Shopping/Shopping';
 import Favorites from '../components/Favorites/Favorites';
+import { fetchData } from '../store/slice/dataSlice';
+import { useDispatch } from 'react-redux';
 
 export default function Home() {
+    const dispatch = useDispatch()
+
+    useEffect(() => {
+        dispatch(fetchData())
+    }, [])
+
     const [showCartModal, setshowCartModal] = useState(false)
     const [cartData, setcartData] = useState([]);
 

@@ -1,34 +1,34 @@
-import axios from 'axios';
 import React from 'react'
 import Movie from './Movie/Movie';
-import { useEffect, useState } from 'react';
+import { useSelector } from 'react-redux';
 import style from './Catalog.module.css'
 
-export default function Catalog({dataCart, dataFavorite}) {
-    const [state, setState] = useState([]);
 
-    useEffect(() => {
-        const getData = async () => {
-            await axios.get('./data.json')
-            .then (res =>  {
-                setState(res.data)
-            })
-            .catch (e => {
-                console.log(e.message);
-            })
-        }
+export default function Catalog({ dataCart, dataFavorite }) {
+    const { items, filterList } = useSelector(({ data }) => data);
 
-        getData();
-    }, [])
 
     return (
         <div className={style.catalog_body}>
             <h1 className={style.txt}>Популярно сейчас</h1>
-            <div className={style.row}>
-                {state.map((item, id) => {
-                    return <Movie data={item} key={id} dataCart = {dataCart} dataFavorite = {dataFavorite} />
-                })}
-            </div>
+            <>
+                {filterList.length > 0
+                    ? (
+                        <div className={style.row}>
+                            {filterList.map((item, id) => {
+                                return <Movie data={item} key={id} dataCart={dataCart} dataFavorite={dataFavorite} />
+                            })}
+                        </div>
+                    )
+                    : (
+                        <div className={style.row}>
+                            {items.map((item, id) => {
+                                return <Movie data={item} key={id} dataCart={dataCart} dataFavorite={dataFavorite} />
+                            })}
+                        </div>
+                    )
+                }
+            </>
         </div>
     )
 }
