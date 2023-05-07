@@ -1,0 +1,37 @@
+{
+  "files": {
+    "main.css": "/react-movie/static/css/main.73c56743.css",
+    "main.js": "/react-movie/static/js/main.ef413490.js",
+    "static/media/imageID15.png": "/react-movie/static/media/imageID15.1e2aa644c082eefaf672.png",
+    "static/media/imageID17.png": "/react-movie/static/media/imageID17.d6994dad9ee3fc3dc1d5.png",
+    "static/media/imageID13.png": "/react-movie/static/media/imageID13.139e1b5ea193a3ddc72d.png",
+    "static/media/imageID18.png": "/react-movie/static/media/imageID18.ebfe7501dbfd5b2ddc89.png",
+    "static/media/imageID4.png": "/react-movie/static/media/imageID4.6e8ab610923dccb5aa61.png",
+    "static/media/imageID1.png": "/react-movie/static/media/imageID1.781eb29aa62a2a956a51.png",
+    "static/media/imageID12.png": "/react-movie/static/media/imageID12.cc6ecda560d6b1e55afd.png",
+    "static/media/imageID2.png": "/react-movie/static/media/imageID2.825ac93f820266f0e7c5.png",
+    "static/media/bannerImg2.png": "/react-movie/static/media/bannerImg2.eb94517eeb53a4b170b7.png",
+    "static/media/imageID19.png": "/react-movie/static/media/imageID19.df2f85099b02bfbf6db2.png",
+    "static/media/imageID3.png": "/react-movie/static/media/imageID3.846c48cb56e8d34641b7.png",
+    "static/media/imageID20.png": "/react-movie/static/media/imageID20.c7336b05c1fac723ceb7.png",
+    "static/media/imageID9.png": "/react-movie/static/media/imageID9.4ce81d4d778f39abde94.png",
+    "static/media/imageID16.png": "/react-movie/static/media/imageID16.b6f0879b39924ced4f8a.png",
+    "static/media/imageID14.png": "/react-movie/static/media/imageID14.1250d48d51a1955e3fd3.png",
+    "static/media/imageID10.png": "/react-movie/static/media/imageID10.86d3409ca08589e0cd64.png",
+    "static/media/imageID5.png": "/react-movie/static/media/imageID5.70e1009841904615cac1.png",
+    "static/media/bannerImg3.png": "/react-movie/static/media/bannerImg3.03d72ae330adc83fb846.png",
+    "static/media/imageID7.png": "/react-movie/static/media/imageID7.e690f17b391961efd611.png",
+    "static/media/imageID6.png": "/react-movie/static/media/imageID6.a7421968cd70d2f94b33.png",
+    "static/media/imageID8.png": "/react-movie/static/media/imageID8.aa0c258e3c04f9a27ec0.png",
+    "static/media/bannerImg1.png": "/react-movie/static/media/bannerImg1.050af5cb022bb506df1e.png",
+    "static/media/imageID11.png": "/react-movie/static/media/imageID11.4ee451dc0bac03c19efd.png",
+    "static/media/bannerLogo.svg": "/react-movie/static/media/bannerLogo.c8cde71ec49d77f38327229784519f1f.svg",
+    "index.html": "/react-movie/index.html",
+    "main.73c56743.css.map": "/react-movie/static/css/main.73c56743.css.map",
+    "main.ef413490.js.map": "/react-movie/static/js/main.ef413490.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.73c56743.css",
+    "static/js/main.ef413490.js"
+  ]
+}
